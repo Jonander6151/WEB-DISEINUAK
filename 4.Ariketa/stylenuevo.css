@@ -1,0 +1,60 @@
+
+:root {
+    /* Kolore nagusiak */
+    --bg-primary: #f8f9fa;
+    --bg-dark: #000000;
+    --bg-card: #ffffff;
+    
+    /* Colores de marca y acento */
+    --color-accent: #ff5733;
+    --color-accent-hover: #e04824;
+    --color-brand: #ffffff;
+    
+    /* Testu koloreak */
+    --text-primary: #1a1a1a;
+    --text-heading: #343a40;
+    --text-muted: #6c757d;
+    --text-light: #ffffff;
+    
+    /* Elur malutak */
+    --snowflake-color: #ced4da;
+    --snowflake-shadow: rgba(255, 255, 255, 0.8);
+    
+    /* Border & shadows */
+    --border-card: rgba(0, 0, 0, 0.03);
+    --border-card-hover: rgba(0, 0, 0, 0.1);
+    --shadow-card-initial: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --shadow-card-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;        
+    background-color: var(--bg-dark);
+    >a{
+        color: var(--text-light);
+        font-family: Righteous;
+        font-size: 30px;
+        text-decoration: none;
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+    >ul{
+        display: flex;
+        justify-content: space-between;
+        >li{
+            margin-right: 20px;
+            font-family: Poppins;
+            >a{
+                color: var(--text-light);
+                text-decoration: none;
+                font-size: 20px;
+            }
+        }
+    }
+
+}
+
+
+

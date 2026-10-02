@@ -1,0 +1,205 @@
+
+:root {
+    /* Kolore nagusiak */
+    --bg-primary: #f8f9fa;
+    --bg-dark: #000000;
+    --bg-card: #ffffff;
+    
+    /* Colores de marca y acento */
+    --color-accent: #ff5733;
+    --color-accent-hover: #e04824;
+    --color-brand: #ffffff;
+    
+    /* Testu koloreak */
+    --text-primary: #1a1a1a;
+    --text-heading: #343a40;
+    --text-muted: #6c757d;
+    --text-light: #ffffff;
+    
+    /* Elur malutak */
+    --snowflake-color: #ced4da;
+    --snowflake-shadow: rgba(255, 255, 255, 0.8);
+    
+    /* Border & shadows */
+    --border-card: rgba(0, 0, 0, 0.03);
+    --border-card-hover: rgba(0, 0, 0, 0.1);
+    --shadow-card-initial: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --shadow-card-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-dark);
+    height: 70px;
+    padding: 0 8%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-family: 'Righteous', cursive;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.main-title {
+    font-family: 'Righteous', cursive;
+    color: var(--color-accent);
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.secondary-title {
+    font-family: 'Righteous', cursive;
+    color: var(--text-heading);
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+}
+
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.event-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-card-initial);
+    border: 1px solid var(--border-card);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.event-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-info h3 {
+    color: var(--text-heading);
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+.snowflake {
+    position: fixed;
+    top: -50px;
+    color: var(--snowflake-color);
+    font-size: 1.5rem;
+    text-shadow: 0 0 5px var(--snowflake-shadow);
+    z-index: 999;
+    pointer-events: none;
+    animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -50px;
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        top: 105vh;
+        transform: translateX(100px) rotate(360deg);
+        opacity: 0.2;
+    }
+}
+
+.snowflake:nth-child(1) { left: 10%; animation-delay: 0s; font-size: 1.2rem; }
+.snowflake:nth-child(2) { left: 20%; animation-delay: 2s; font-size: 1.8rem; }
+.snowflake:nth-child(3) { left: 35%; animation-delay: 4s; font-size: 1rem; }
+.snowflake:nth-child(4) { left: 50%; animation-delay: 1s; font-size: 2rem; }
+.snowflake:nth-child(5) { left: 65%; animation-delay: 3s; font-size: 1.4rem; }
+.snowflake:nth-child(6) { left: 75%; animation-delay: 5s; font-size: 1.1rem; }
+.snowflake:nth-child(7) { left: 85%; animation-delay: 2.5s; font-size: 1.6rem; }
+.snowflake:nth-child(8) { left: 92%; animation-delay: 0.5s; font-size: 1.3rem; }
+.snowflake:nth-child(9) { left: 40%; animation-delay: 6s; font-size: 1.7rem; }
+
+.footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 8px;
+}
+
+.footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer a:hover {
+    color: var(--text-light);
+}

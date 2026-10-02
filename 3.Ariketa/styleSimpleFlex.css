@@ -1,6 +1,7 @@
 *{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:dimgray;
+    text-decoration: none;
 }
 /* <!-- NAVBAR --> */
 header{
@@ -8,8 +9,6 @@ header{
     justify-content: space-between;
     height: 75px;
 }
-
-
 
 header ul{
     display: flex;
@@ -70,11 +69,4 @@ footer a{
     color: white;
     font-weight: bold;
     border-radius: 5px;
-}
-
-@media screen {@media (min-width: 600px){
-    article{
-        width: 100%;
-    }
-}
 }
